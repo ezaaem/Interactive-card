@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Credit Card Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <container class="container">
+      <div class="part1">
+        <div class="pic1">
+          <img class="logo" src="/images/card-logo.svg" alt="" />
+          <input
+            type="tel"
+            class="cardwithoutbg"
+            id="card"
+            name="cardNumber"
+            inputmode="numeric"
+            placeholder="0000 0000 0000 0000
+            "
+            pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}"
+            required
+          />
+          <div class="inputincard">
+            <input
+              class="cardwithoutbg"
+              type="text"
+              placeholder="Jane Appleseed
+                "
+              id="cardname"
+              name="cardholderName"
+            />
+            <input
+              class="cardwithoutbg"
+              type="tel"
+              id="Dateofcard"
+              inputmode="numeric"
+              pattern="[0-9]{2}"
+              placeholder="MM"
+            />
+            <span class="dash">/</span>
+            <input
+              class="cardwithoutbg"
+              type="tel"
+              id="yyofcard"
+              inputmode="numeric"
+              pattern="[0-9]{2}"
+              placeholder="YY"
+            />
+          </div>
+        </div>
+        <div class="pic2">
+          <input
+            class="cardwithoutbg"
+            type="tel"
+            id="cvcofcard"
+            name="cvc"
+            inputmode="numeric"
+            pattern="[0-9]{3}"
+            placeholder="000"
+          />
+        </div>
+      </div>
+      <div class="part2">
+        <form id="credit-card-form">
+          <div class="card-holder">
+            <label for="cardholder-name">CARDHOLDER NAME</label>
+            <input
+              type="text"
+              placeholder="e.g. Jane Appleseed
+      "
+              id="cardholder-name"
+              name="cardholderName"
+              required
+            />
+          </div>
+ 
+          <div class="card-number">
+            <label for="card-number">CARD NUMBER</label>
+            <input
+              type="tel"
+              id="card-number"
+              name="cardNumber"
+              inputmode="numeric"
+              oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+              minlength="16"
+              maxlength="16"
+              placeholder="e.g. 1234 5678 9123 0000
+      "
+               required
+            />
+           </div>
+
+          <label class="cvcl" for="exp-date">EXP. DATE(MM/YY)</label>
+          <label class="cvcl" for="cvc">CVC</label>
+
+          <div class="expiration-date">
+            <input
+              type="text"
+              id="exp-mm"
+              class="exp-date"
+              oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                      minlength="2"
+                      maxlength="2"
+              name="expDate"
+              placeholder="MM"
+              required
+            />
+            <input
+              type="text"
+              class="exp-date"
+              oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                      minlength="2"
+                      maxlength="2"
+              id="exp-yy"
+              name="expDate"
+              placeholder="YY"
+              required
+            />
+            
+
+            <input
+              type="tel"
+              id="cvc"
+              name="cvc"
+              oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                      minlength="3"
+                      maxlength="3"
+              inputmode="numeric"
+              placeholder="000"
+              pattern="[0-9]{3}"
+              required
+            />
+          </div>
+ 
+          <button id="submit-btn" type="submit">Confirm</button>
+        </form>
+        <div id="thank-you-message" style="display: none">
+          <img class="img" src="/images/icon-complete.svg" alt="" />
+          <h1>Thank you!</h1>
+
+          <p>we've added your credit card.</p>
+          <button class="Continue" type="submit">Continue</button>
+        </div>
+      </div>
+    </container>
+
+    <script src="script.js"></script>
+  </body>
+</html>

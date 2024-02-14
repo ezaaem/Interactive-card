@@ -1,0 +1,337 @@
+body {
+  font-family: "Space Grotesk", sans-serif;
+  margin: 0;
+  font-size: 12px;
+}
+.container {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  height: 100vh;
+  width: 100vw;
+}
+
+.part1 {
+  background-image: url(/images/bg-main-desktop.png);
+  display: grid;
+  position: relative;
+}
+.part2 {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+.pic1 {
+  box-sizing: border-box;
+  position: absolute;
+  background-image: url(/images/bg-card-front.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 220px;
+  width: 400px;
+  margin-top: 40px;
+  padding: 20px;
+
+  top: 40px;
+  left: 180px;
+}
+.pic2 {
+  position: relative;
+  background-image: url(/images/bg-card-back.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 220px;
+  top: 340px;
+  left: 240px;
+}
+.cardwithoutbg {
+  border: none;
+  background: none;
+  outline: none;
+  color: aliceblue;
+}
+h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+p {
+  color: hsl(279, 6%, 55%);
+}
+#thank-you-message {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.img {
+  padding-left: 115px;
+}
+#submit-btn {
+}
+.dash {
+  font-size: 12px;
+}
+
+.cardwithoutbg::placeholder {
+  color: white; /* Set your desired color */
+}
+label {
+  margin-bottom: 5px;
+}
+#Dateofcard {
+  font-size: 12px;
+  text-align: right;
+}
+#yyofcard {
+  margin-bottom: 0;
+  font-size: 12px;
+}
+#cardname {
+  font-size: 12px;
+}
+#cvcofcard {
+  margin-top: 100px;
+  margin-left: 190px;
+  text-align: right;
+}
+#card {
+  width: 100%;
+  font-size: 28px;
+  padding-bottom: 10px;
+  padding-top: 60px;
+}
+#card-number,
+#cardholder-name {
+  width: 330px;
+  padding: 10px 0 10px 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.exp-date {
+  width: 50px;
+  padding: 10px 0 10px 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  margin-right: 0px;
+}
+.inputincard {
+  display: flex;
+}
+.expiration-date {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr; /* Three equal columns */
+  grid-template-rows: 1fr;
+  margin-top: 5px;
+}
+.dash {
+  color: white;
+  font-size: 12px;
+}
+
+label {
+  display: block;
+}
+
+input {
+  border: 1px solid black;
+}
+
+#cvc {
+  display: inline;
+  padding: 10px 0 10px 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.cvcl {
+  display: inline;
+  margin-right: 64px;
+  margin-bottom: 10px;
+}
+.Continue {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  width: 300px;
+  margin-top: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#submit-btn {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #449d44;
+}
+
+/* Add basic styling for error messages */
+.error {
+  border: 2px solid red;
+}
+.error_message {
+  flex-wrap: wrap;
+
+  gap: 1;
+}
+.error_message::after {
+  content: "cant't be blank";
+  color: red;
+  margin-top: 0px;
+  display: block;
+}
+
+@media (max-width: 500px) {
+  body {
+    font-family: "Space Grotesk", sans-serif;
+    margin: 0;
+    font-size: 12px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .part1 {
+    background-image: url(/images/bg-main-desktop.png);
+    position: relative;
+    width: 100%;
+    height: 250px;
+  }
+  .part2 {
+    display: grid;
+
+    justify-content: center;
+    margin-top: 150px;
+  }
+  .pic1 {
+    box-sizing: border-box;
+    overflow: hidden;
+
+    height: 170px;
+    width: 300px;
+    margin-top: 20px;
+    padding: 20px;
+
+    top: 120px;
+    left: 20px;
+    z-index: 1;
+  }
+  .pic2 {
+    position: relative;
+    background-image: url(/images/bg-card-back.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 170px;
+    width: 300px;
+    top: 40px;
+    left: 50px;
+  }
+  .cardwithoutbg {
+    border: none;
+    background: none;
+    outline: none;
+    color: aliceblue;
+  }
+  h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  p {
+    color: hsl(279, 6%, 55%);
+  }
+
+  .cardwithoutbg::placeholder {
+    color: white; /* Set your desired color */
+  }
+  label {
+    margin-bottom: 5px;
+  }
+  #Dateofcard {
+    font-size: 8px;
+    margin: 0px;
+    padding-left: 10px;
+  }
+  #yyofcard {
+    font-size: 8px;
+    width: 10px;
+    margin: 0px;
+    padding: 0;
+  }
+  #cardname {
+    font-size: 8px;
+    margin: 0px;
+    padding-top: 0px;
+  }
+  .dash {
+    text-align: left;
+  }
+  .logo {
+    height: 30px;
+  }
+  #cvcofcard {
+    margin-top: 73px;
+    margin-left: 98px;
+    text-align: right;
+  }
+  #card {
+    width: 100%;
+    font-size: 20px;
+    padding-bottom: 10px;
+    padding-top: 40px;
+  }
+  #card-number,
+  #cardholder-name {
+    padding: 10px 0 10px 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  .exp-date {
+    padding: 10px 0 10px 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  .inputincard {
+    display: flex;
+  }
+  .expiration-date {
+    display: flex;
+    margin-top: 5px;
+  }
+  .dash {
+    color: white;
+    font-size: 12px;
+  }
+
+  label {
+    display: block;
+  }
+
+  input {
+    border: 1px solid black;
+  }
+
+  #cvc {
+    width: 200px;
+    display: inline;
+    padding: 10px 0 10px 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  .cvcl {
+    display: inline;
+    margin-right: 20px;
+    margin-bottom: 0px;
+  }
+
+  /* Add basic styling for error messages */
+}
